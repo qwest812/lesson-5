@@ -1,0 +1,42 @@
+<!DOCTYPE htm>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Селекторы</title>
+    <style>
+        form img {
+            display: none;
+            width: 100px;
+        }
+        form{
+            height: 300px;
+            border: 1px solid red;
+        }
+        img{
+            width: 100px;
+        }
+        /*#switch:hover ~ img {*/
+            /*display: block;*/
+        /*}*/
+
+        form:hover img{
+            display: block;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<form>
+    <input type="checkbox" id="switch">
+    <label for="switch">Показать картинки</label>
+    <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" alt="">
+    <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" alt="">
+    <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" alt="">
+    
+</form>
+<div>
+    <img src="https://www.imgacademy.com/sites/default/files/soccerfacilities2.jpg">
+</div>
+</body>
+</html>

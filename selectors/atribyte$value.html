@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Селекторы атрибутов</title>
+    <style>
+        a[href$=".ru"] { /* Если ссылка заканчивается на .ru */
+            background: url(images/ru.png) no-repeat 0 6px; /* Добавляем фоновый рисунок */
+            padding-left: 12px; /* Смещаем текст вправо */
+        }
+        a[href$=".com"] { /* Если ссылка заканчивается на .com */
+            background: url(images/com.png) no-repeat 0 6px;
+            padding-left: 12px;
+        }
+
+
+
+        [href*="htmlbook"] {
+            background: yellow; /* Желтый цвет фона */
+        }
+
+
+        a[target="_blank"] {
+            background: url(images/blank.png) 0 6px no-repeat; /* Фоновый рисунок */
+            padding-left: 15px; /* Смещаем текст вправо */
+        }
+
+
+        a[href^="http://"] {
+            font-weight: bold /* Жирное начертание */
+        }
+
+        div[class|="block"] {
+            background: #306589; /* Цвет фона */
+            color: #acdb4c; /* Цвет текста */
+            padding: 5px; /* Поля */
+        }
+        div[class|="block"] a {
+            color: #fff; /* Цвет ссылок */
+        }
+
+
+        [class~="block"] h3 { color: green; }
+
+        q {
+            font-style: italic; /* Курсивное начертание */
+            quotes: "\00AB" "\00BB"; /* Меняем вид кавычек в цитате */
+        }
+        q[title] {
+            color: maroon; /* Цвет текста */
+        }
+
+    </style>
+
+</head>
+<body>
+<p><a href="http://www.yandex.com">Yandex.Com</a> |
+    <a href="http://www.yandex.ru">Yandex.Ru</a></p>
+
+
+
+<p><a href="http://www.htmlbook.ru/html/">Теги HTML</a> |
+    <a href="http://stepbystep.htmlbook.ru">Шаг за шагом</a> |
+    <a href="http://webimg.ru">Графика для Веб</a></p>
+
+
+
+<p><a href="link1.html">Обычная ссылка</a> |
+    <a href="link2" target="_blank">Ссылка в новом окне</a></p>
+
+
+<p><a href="link1.html">Обычная ссылка</a> |
+    <a href="http://htmlbook.ru" target="_blank">Внешняя
+        ссылка на сайт htmlbook.ru</a></p>
+
+
+
+<div class="block-menu-therm">
+    <h2>Термины</h2>
+    <div class="content">
+        <ul class="menu">
+            <li><a href="t1.html">Буквица</a></li>
+            <li><a href="t2.html">Выворотка</a></li>
+            <li><a href="t3.html">Выключка</a></li>
+            <li><a href="t4.html">Интерлиньяж</a></li>
+            <li><a href="t5.html">Капитель</a></li>
+            <li><a href="t6.html">Начертание</a></li>
+            <li><a href="t7.html">Отбивка</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="block tag">
+    <h3>Заголовок</h3>
+</div>
+
+
+<p>Продолжая известный закон Мерфи, который гласит: <q>Если неприятность
+    может случиться, то она обязательно случится</q>, можем ввести свое наблюдение:
+    <q title="Из законов Фергюссона-Мержевича">После того, как веб-страница
+        будет корректно отображаться в одном браузере, выяснится,
+        что она неправильно показывается в другом</q>.</p>
+</body>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    input:in-range { border: 3px groove green; } /* в пределах диапазона допустимых значений */
+
+    input:out-of-range { border: 3px groove red; } /* за пределами диапазона допустимых значений */
+</style>
+
+<input type="number" max="10" min="1" value="5"><input type="number" max="10" min="1" value="11">
+</body>
+</html>
